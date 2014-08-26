@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.11: http://docutils.sourceforge.net/" />
+<title>IS 210: Software Application Programming I</title>
+<meta name="authors" content="Chad Heuschober  Clayton Kramer" />
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7614 2013-02-21 15:55:51Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="is-210-software-application-programming-i">
+<h1 class="title">IS 210: Software Application Programming I</h1>
+<h2 class="subtitle" id="lesson-01-assignment">Lesson 01: Assignment</h2>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr class="field"><th class="docinfo-name">College:</th><td class="field-body">CUNY School of Professional Studies</td>
+</tr>
+<tr class="field"><th class="docinfo-name">Course-Name:</th><td class="field-body">Software Application Programming I</td>
+</tr>
+<tr class="field"><th class="docinfo-name">Course-Code:</th><td class="field-body">IS 210</td>
+</tr>
+<tr class="field"><th class="docinfo-name">Lesson:</th><td class="field-body">01</td>
+</tr>
+<tr class="field"><th class="docinfo-name">Points:</th><td class="field-body">20</td>
+</tr>
+<tr class="field"><th class="docinfo-name">Available:</th><td class="field-body">2014-08-28T00:00:00-0400</td>
+</tr>
+<tr class="field"><th class="docinfo-name">Due-Date:</th><td class="field-body">2014-09-02T09:00:00-0400</td>
+</tr>
+<tr><th class="docinfo-name">Authors:</th>
+<td>Chad Heuschober
+<br />Clayton Kramer</td></tr>
+</tbody>
+</table>
+<div class="section" id="overview">
+<h1>Overview</h1>
+<p>This week's assignment serves to introduce you to the workflow you'll use to
+submit the majority of your homework in class. It should take somewhere between
+thirty-minutes and one-hour to complete, however, as this will be your first
+experience with many new tools and technologies, I highly recommend that you
+start work early in the event that you need to ask for assistance.</p>
+</div>
+<div class="section" id="prerequisites">
+<h1>Prerequisites</h1>
+<p>You should have completed all of the readings for this week before attempting
+this assignment. Additionally, you should have already installed <a class="reference external" href="https://www.python.org/download/releases/2.7/">Python 2.7</a>
+and <a class="reference external" href="http://git-scm.com/">Git</a> on your machine. This assignment will require a stable internet
+connection as much of this work will interact with external resources.</p>
+</div>
+<div class="section" id="conventions">
+<h1>Conventions</h1>
+<div class="section" id="terminal">
+<h2>Terminal</h2>
+<p>Use of the term <em>terminal</em> can be ambiguous depending upon the operating
+system in use. For users of Microsoft Windows operating systems, this
+specifically refers to the <tt class="docutils literal">git bash</tt> shell that is available after the
+installation of <a class="reference external" href="http://git-scm.com/">Git</a>. To use the <tt class="docutils literal">git bash</tt> shell, right click the
+contents of a folder in Windows explorer and select <tt class="docutils literal">git bash</tt>. This
+should bring up a compatible terminal window. Users of OSX or other Linux
+distributions will find that that their default terminals already come equipped
+with the correct tools after the installation of <a class="reference external" href="http://git-scm.com/">Git</a> and <a class="reference external" href="https://www.python.org/download/releases/2.7/">Python 2.7</a>.</p>
+</div>
+<div class="section" id="console-commands">
+<h2>Console Commands</h2>
+<p>For the purpose of this exercise, console commands will be preceded with a
+dollar sign ($), to indicate the presence of a shell. Do not include this
+symbol in any commands you type or copy yourself.</p>
+</div>
+</div>
+<div class="section" id="instructions">
+<h1>Instructions</h1>
+<div class="section" id="task-1-sign-up-for-github">
+<h2>Task 1: Sign-Up for GitHub</h2>
+<ol class="arabic">
+<li><p class="first">Create a <a class="reference external" href="https://github.com/">GitHub</a> account.</p>
+<ol class="arabic">
+<li><p class="first">Visit the <a class="reference external" href="https://github.com/">GitHub</a> website.</p>
+</li>
+<li><p class="first">If you do not already have an account, create one.</p>
+<ol class="arabic simple">
+<li>Enter a new  username, your CUNY SPS-issued e-mail address,
+and a password, then click <strong>Sign-Up</strong>.</li>
+</ol>
+<img alt="http://is210-faculty.github.io/images/github-create-account.png" class="align-center" src="http://is210-faculty.github.io/images/github-create-account.png" />
+<ol class="arabic simple">
+<li>The next screen will ask if you wish to upgrade to a paid plain. A
+paid plan is not necessary for this course and will offer you no
+advantages or benefits to coursework. Unless you have a personal
+reason to choose otherwise, leave the <em>Free</em> tier selected and
+click <strong>Finish sign-up</strong>.</li>
+</ol>
+<img alt="http://is210-faculty.github.io/imgages/github-account-tier.png" class="align-center" src="http://is210-faculty.github.io/imgages/github-account-tier.png" />
+<ol class="arabic simple">
+<li>This will take you to your <a class="reference external" href="https://github.com/">GitHub</a> landing page. If you'd like
+to edit your profile further but including a picture or other
+details about yourself, you can visit your <a class="reference external" href="https://github.com/settings/profile">GitHub Profile</a> page
+by clicking the little gear icon in the upper right corner of the
+header.</li>
+</ol>
+<img alt="http://is210-faculty.github.io/images/github-settings-icon.png" class="align-center" src="http://is210-faculty.github.io/images/github-settings-icon.png" />
+<ol class="arabic simple">
+<li>Check your e-mail address from a verification e-mail from
+<a class="reference external" href="https://github.com/">GitHub</a>.</li>
+<li>If you didn't yet receive one, visit your <a class="reference external" href="https://github.com/settings/emails">GitHub E-Mail Settings</a>
+page and request another e-mail verification.</li>
+</ol>
+</li>
+<li><p class="first">If you already have a <a class="reference external" href="https://github.com/">GitHub</a> account, please make you you have added
+your official CUNY SPS e-mail address to the account.</p>
+<ol class="arabic simple">
+<li>Visit your <a class="reference external" href="https://github.com/settings/emails">GitHub E-Mail Settings</a> page and add your CUNY SPS
+e-mail address.</li>
+<li>Be sure to verify this address, checking your e-mail for a
+verification e-mail sent from <a class="reference external" href="https://github.com/">GitHub</a> or using the
+<a class="reference external" href="https://github.com/settings/emails">GitHub E-Mail Settings</a> page to send another verification e-mail.</li>
+</ol>
+</li>
+<li><p class="first">Post your <a class="reference external" href="https://github.com/">GitHub</a> username into the assignment body on BlackBoard.</p>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="section" id="task-2-submit-your-first-python-code">
+<h2>Task 2: Submit your first Python Code</h2>
+<ol class="arabic">
+<li><p class="first">Visit the <a class="reference external" href="https://github.com/cheuschober/is210_2014_fall_02_lesson_01">assignment repository</a> page.</p>
+<img alt="http://is210-faculty.github.io/images/github-assignment-repository.png" class="align-center" src="http://is210-faculty.github.io/images/github-assignment-repository.png" />
+</li>
+<li><p class="first">Use the <strong>Fork</strong> button in the upper-right hand corner of the screen to
+<em>fork</em> this repository, which, effectively, makes a copy of it on your
+personal <a class="reference external" href="https://github.com/">GitHub</a> account.</p>
+<img alt="http://is210-faculty.github.io/images/github-fork-icon.png" class="align-center" src="http://is210-faculty.github.io/images/github-fork-icon.png" />
+</li>
+<li><p class="first">Double check that you are now on your own personal fork of the <a class="reference external" href="https://github.com/cheuschober/is210_2014_fall_02_lesson_01">assignment
+repository</a> and not the <a class="reference external" href="https://github.com/cheuschober/is210_2014_fall_02_lesson_01">assignment repository</a> page itself.  You can
+differentiate the two because the title of the repository at the top of the
+screen should now start with your <a class="reference external" href="https://github.com/">GitHub</a> user account name, not the
+account name of your instructor.</p>
+<img alt="http://is210-faculty.github.io/images/github-repository-landing.png" class="align-center" src="http://is210-faculty.github.io/images/github-repository-landing.png" />
+</li>
+<li><p class="first">Now that you're on your personal fork of the <a class="reference external" href="https://github.com/cheuschober/is210_2014_fall_02_lesson_01">assignment repository</a> copy
+the <strong>HTTPS Clone Url</strong> in the lower right-hand corner of the screen.</p>
+<img alt="http://is210-faculty.github.io/images/github-https-clone-url.png" class="align-center" src="http://is210-faculty.github.io/images/github-https-clone-url.png" />
+</li>
+<li><p class="first">Open a terminal on your local machine.</p>
+</li>
+<li><p class="first">If this is your first time using <a class="reference external" href="http://git-scm.com/">Git</a> on this machine, you must first
+set-up <a class="reference external" href="http://git-scm.com/">Git</a> to recognize your contributions.</p>
+<p>Type the following two commands:</p>
+<pre class="code console literal-block">
+<span class="generic prompt">$</span> git config user.name <span class="literal string double">&quot;FIRST LAST&quot;</span>
+<span class="generic prompt">$</span> git config user.email <span class="literal string double">&quot;MY&#64;EMAIL&quot;</span>
+</pre>
+<p>Replace <tt class="docutils literal">FIRST</tt> and <tt class="docutils literal">LAST</tt> with your first name and last name as you
+would like them to appear on your contributions. Replay <tt class="docutils literal">MY&#64;EMAIL</tt> with
+the same e-mail address you registered with <a class="reference external" href="https://github.com/">GitHub</a>. This should be your
+CUNY SPS e-mail address.</p>
+</li>
+<li><p class="first">Once <a class="reference external" href="http://git-scm.com/">Git</a> is properly configured, type the following into the terminal in
+order to take a copy of the repository.</p>
+<pre class="code console literal-block">
+<span class="generic prompt">$</span> git clone HTTPS_CLONE_URL lesson_01
+</pre>
+<p>Replace  HTTPS_CLONE_URL with the <strong>HTTPS Clone URL</strong> you copied from
+<a class="reference external" href="https://github.com/">GitHub</a>. This will copy your <em>personal</em> fork from <a class="reference external" href="https://github.com/">GitHub</a> to your local
+machine and into a directory called <tt class="docutils literal">lesson_01</tt></p>
+</li>
+<li><p class="first">Next type:</p>
+<pre class="code console literal-block">
+<span class="generic prompt">$</span> <span class="name builtin">cd </span>lesson_01
+</pre>
+<p>This command will <tt class="docutils literal">cd</tt> or <em>change directory</em> from the current one you're
+in to the <tt class="docutils literal">lesson_01</tt> directory.</p>
+</li>
+<li><p class="first">To <em>list</em> all the files and folders in this directory, type:</p>
+<pre class="code console literal-block">
+<span class="generic prompt">$</span> ls
+</pre>
+<p>Which should return the following:</p>
+<pre class="code console literal-block">
+<span class="generic output">hello_world.py LICENSE README.rst</span>
+</pre>
+<p><tt class="docutils literal">hello_world.py</tt> is a Python file.</p>
+<p><tt class="docutils literal">LICENSE</tt> is a standard license file. In this case, all of the code in
+this repository is covered under the <em>Mozilla Public License (v2)</em> which is
+an open-source license that permits you to distribute, share, and alter
+this code without fear of legal retribution provided that you follow the
+guidelines stated in the license file.</p>
+<p><tt class="docutils literal">README.rst</tt> is a README, a special type of documentation file about this
+project. The <tt class="docutils literal">.rst</tt> extension indicates that it's written in
+<a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a>, the official language of Python documentation. If you
+were to peer inside that file you would the directions you're reading right
+now. Each assignment's instructions will be distributed with the assignment
+source code.</p>
+</li>
+<li><p class="first">We'll start by running our first python program. Type the following at
+the command line:</p>
+<pre class="code console literal-block">
+<span class="generic prompt">$</span> python hello_world.py
+</pre>
+<p>This will call the Python interpreter to start (<tt class="docutils literal">python</tt>), and feed it a
+file to read and execute (<tt class="docutils literal">hello_world.py</tt>). It should have printed
+the following:</p>
+<pre class="code console literal-block">
+<span class="generic output">Hello World!</span>
+</pre>
+</li>
+<li><p class="first">Now, open hello_world.py in your text editor.</p>
+<ol class="arabic">
+<li><p class="first">If you don't already have a favorite text editor, you can open the file
+with <tt class="docutils literal">idle</tt> the basic text editor that comes bundled with Python. To
+open the file with <tt class="docutils literal">idle</tt>, just type:</p>
+<pre class="code console literal-block">
+<span class="generic prompt">$</span> idle hello_world.py
+</pre>
+</li>
+<li><p class="first">You should now see the contents of the file which look like:</p>
+<pre class="code python literal-block">
+<span class="comment">#!/usr/bin/env python</span>
+<span class="comment"># -*- coding: utf-8 -*-</span>
+<span class="literal string doc">&quot;&quot;&quot;Prints a ``Hello World`` statement.&quot;&quot;&quot;</span>
+
+
+<span class="keyword">print</span> <span class="literal string">&quot;Hello World!&quot;</span>
+</pre>
+</li>
+<li><p class="first">Alter the file in such a way that instead of printing:</p>
+<pre class="code console literal-block">
+<span class="generic output">Hello World!</span>
+</pre>
+<p>Have it print:</p>
+<pre class="code console literal-block">
+<span class="generic output">Hello USERNAME!</span>
+</pre>
+<p>Where <tt class="docutils literal">USERNAME</tt> is your <a class="reference external" href="https://github.com/">GitHub</a> username.</p>
+</li>
+<li><p class="first">Save your changes and exit the text editor</p>
+</li>
+</ol>
+</li>
+<li><p class="first">To see if you were successful, try running the code again:</p>
+<pre class="code console literal-block">
+<span class="generic prompt">$</span> python hello_world.py
+</pre>
+<p>It should now print <tt class="docutils literal">Hello <span class="pre">YOUR-GITHUB-USERNAME!</span></tt>.</p>
+</li>
+<li><p class="first">Once you're satisfied with the changes, let's take a look at what we've
+done in the repository. Type the <tt class="docutils literal">git status</tt> command and receive output
+similar to the following:</p>
+<pre class="code console literal-block">
+<span class="generic prompt">$</span> git status
+<span class="generic output">On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+    (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+    (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+
+        modified:   hello_world.py
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span>
+</pre>
+<p>The <tt class="docutils literal">git status</tt> command returns the status of your current repository.
+In this case it's telling us a few things:</p>
+<pre class="code console literal-block">
+<span class="generic output">On branch master
+Your branch is up-to-date with 'origin/master'.</span>
+</pre>
+<p>This sections tells us which working branch we're using. We're not going to
+use branches very often so you can skip this part, however the next line is
+interesting because it's told us that it knows this code is up-to-date with
+what you have in the your personal fork on <a class="reference external" href="https://github.com/">GitHub</a>. If you or someone
+else had made changes to the repository on <a class="reference external" href="https://github.com/">GitHub</a> after you had clone'ed
+the source, then this would report how far ahead your remote branch was.
+You could then choose to use a command like <tt class="docutils literal">git pull</tt> to pick up the
+most recent changes from <a class="reference external" href="https://github.com/">GitHub</a>. This is helpful if you spread your
+work across several machines.</p>
+<pre class="code console literal-block">
+<span class="generic output">Changes not staged for commit:
+(use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+(use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+
+    modified:   hello_world.py
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span>
+</pre>
+<p>This section is more relevant for us. The first section it lists are files
+that it knows exist but that you have not told it to save in the next
+revision. When you closed you text editor you saved the file itself but
+a repository revision can be thought of like a snapshot in time of a whole
+folder full of files. Right now, though you've changed the file inside you
+haven't <em>saved</em> or <em>committed</em> the changes.</p>
+<p>Here it tells us that it knows that <tt class="docutils literal">hello_world.py</tt>, specifically, was
+modified and it reminds us of the command we need to execute to save it.</p>
+</li>
+<li><p class="first">Before we do that, however, there's one more git command that's useful for
+seeing changes. Let's say it's not enough that the file was changed. Let's
+say we want to know exactly what was changed from the last time the file
+was commited in the repository. Try the following command:</p>
+<pre class="code console literal-block">
+<span class="generic prompt">$</span> git diff
+</pre>
+<p>You should receive some pretty dense output that looks like:</p>
+<pre class="code diff literal-block">
+<span class="generic heading">diff --git a/hello_world.py b/hello_world.py
+index dfd137d..2eb4936 100644
+</span><span class="generic deleted">--- a/hello_world.py
+</span><span class="generic inserted">+++ b/hello_world.py
+</span><span class="generic subheading">&#64;&#64; -3,4 +3,4 &#64;&#64;
+</span> &quot;&quot;&quot;Prints a ``Hello World`` statement.&quot;&quot;&quot;
+
+
+ -print &quot;Hello World!&quot;
+ +print &quot;Hello zoezebra!&quot;
+</pre>
+<p>The above output is a machine-readable diff format. It's sometimes used
+to create patch files and has a long history in the computer industry.
+While it's not amazingly legible, with practice it is possible to
+understand the output. On the first few line it tells us what's being
+compared and at what line numbers the comparison is happening. Then it
+shows us the difference. The line prefixed with a dash (<tt class="docutils literal">-</tt>) is being
+removed and replaced with the line prefixed by a plus sign (<tt class="docutils literal">+</tt>).</p>
+<p>I don't expect you'll use this every day but it can be helpful for
+checking your changes.</p>
+</li>
+<li><p class="first">Now that we've reviewed our changes let's stage them for the commit. Type:</p>
+<pre class="code console literal-block">
+<span class="generic prompt">$</span> git add hello_world.py
+</pre>
+<p>This will tell git to add <tt class="docutils literal">hello_world.py</tt> in its next revision. This
+does not actually commit the change but it will be included.</p>
+<p>To check that it is staged, you can use <tt class="docutils literal">git status</tt> again which should
+produce output similar to the following:</p>
+<pre class="code console literal-block">
+<span class="generic output">On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
+
+       modified:   hello_world.py</span>
+</pre>
+<p>Compared to our earlier <tt class="docutils literal">git status</tt> the <tt class="docutils literal">hello_world.py</tt> file has
+changed from being listed under <em>Changes not staged for commit</em> to being
+listed under <em>Changes to be committed</em>. We now are ready for our first
+commit.</p>
+</li>
+<li><p class="first">As I said earlier, a <em>commit</em> is like saving the folder at a particular
+point in time. With <a class="reference external" href="http://git-scm.com/">Git</a> we can not only save the folder as of a specific
+commit but we can go back to earlier states or merge changes with future
+states. For now, we just want to save our change to <tt class="docutils literal">hello_world.py</tt>.</p>
+<p>Type the following:</p>
+<pre class="code console literal-block">
+<span class="generic prompt">$</span> git commit -m <span class="literal string double">&quot;Changed hello world to include my github username.&quot;</span>
+</pre>
+<p>Congratulations! You've taken a snapshot of your work! You should receive
+a few lines of output like:</p>
+<pre class="code console literal-block">
+<span class="generic output">[master dbe34f4] Changed hello world to include my github username.
+1 file changed, 1 insertion(+), 1 deletion(-)</span>
+</pre>
+<p>The first is your commit ID and the second is just a summary of the
+changes.</p>
+<p>We include the <tt class="docutils literal"><span class="pre">-m</span> <span class="pre">&quot;...&quot;</span></tt> portion to automatically include the portion
+between the double quotes as our <em>commit message</em>. A commit message is an
+important part of every commit as it should inform someone why you made the
+changes you made in this particular commit. While not intended to be books,
+they should be complete enough to glean an understanding of the intention
+behind the changes in the files. Since a very large commit with many file
+changes would have a large commit message, we generally encourage commits
+to be small and often each representing a single change in function or
+output. If you do not include the <tt class="docutils literal"><span class="pre">-m</span> <span class="pre">&quot;...&quot;</span></tt> portion then a window should
+pop-up allowing you to write your commit messages in an alternative text
+editor.</p>
+<div class="note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you'd ever like to see the history of commits in a particular
+repository, use the <tt class="docutils literal">git log</tt> command.</p>
+</div>
+</li>
+<li><p class="first">The work is now saved on your local machine, but is not yet be <em>pushed</em> to
+your repository on <a class="reference external" href="https://github.com/">GitHub</a>. To do that, type the following:</p>
+<pre class="code console literal-block">
+<span class="generic prompt">$</span> git push origin
+</pre>
+<p>This will <tt class="docutils literal">push</tt> the contents of your current repository to the remote
+<tt class="docutils literal">origin</tt> repository (in this case, the one you cloned from: your personal
+fork of the original branch).</p>
+</li>
+<li><p class="first">Now it's time to go back to <a class="reference external" href="https://github.com/">GitHub</a> to see our changes.</p>
+<ol class="arabic">
+<li><p class="first">Click your username to be taking to your user landing page.</p>
+<img alt="http://is210-faculty.github.io/images/github-user-home.png" class="align-center" src="http://is210-faculty.github.io/images/github-user-home.png" />
+</li>
+<li><p class="first">On the center, near the top, click the tab called <strong>Repositories</strong></p>
+</li>
+<li><p class="first">You should have been presented with a list of repositories including
+the one you were just working on: <strong>is210_2014_fall...</strong></p>
+<img alt="http://is210-faculty.github.io/images/github-list-of-repositories.png" class="align-center" src="http://is210-faculty.github.io/images/github-list-of-repositories.png" />
+</li>
+<li><p class="first">Click the repository link to see the repository and the changes you
+made. You can click individual files to see how they look now or
+use the commits tab above to see all of the commits (including your
+own).</p>
+<img alt="http://is210-faculty.github.io/images/github-repository-commits.png" class="align-center" src="http://is210-faculty.github.io/images/github-repository-commits.png" />
+</li>
+</ol>
+</li>
+<li><p class="first">Once you've confirmed that you're happy with the changes, you must open
+a pull request in order submit changes for grading.</p>
+<ol class="arabic">
+<li><p class="first">Go back to the main page for the Lesson 01 repository on <a class="reference external" href="https://github.com/">GitHub</a> and
+click the green icon with two arrows in a circle to the left of the
+<strong>branch</strong> dropdown. The tooltip for this icon is &quot;Compare, review,
+create pull request&quot; which is exactly what we're going to do.</p>
+<img alt="http://is210-faculty.github.io/images/github-pull-request-square-icon.png" class="align-center" src="http://is210-faculty.github.io/images/github-pull-request-square-icon.png" />
+</li>
+<li><p class="first">The next page will outline the available changes for this pull request,
+there's only one thing we need to fix: right now it will send this
+pull request against the master branch and we don't want that. In the
+future, each student will have his or her own branches on the parent
+repository but, for now, we'll all use a different branch, the <tt class="docutils literal">pull</tt>
+branch.</p>
+<img alt="http://is210-faculty.github.io/images/github-pull-request-initial-screen.png" class="align-center" src="http://is210-faculty.github.io/images/github-pull-request-initial-screen.png" />
+<ol class="arabic">
+<li><p class="first">Click the <strong>Edit</strong> button in the pull request header.</p>
+<img alt="http://is210-faculty.github.io/images/github-pull-request-branch-target-edit.png" class="align-center" src="http://is210-faculty.github.io/images/github-pull-request-branch-target-edit.png" />
+</li>
+<li><p class="first">Select the <tt class="docutils literal">pull</tt> branch from the <strong>Base:</strong> branch drop down.</p>
+<img alt="http://is210-faculty.github.io/images/github-pull-request-branch-dropdown.png" class="align-center" src="http://is210-faculty.github.io/images/github-pull-request-branch-dropdown.png" />
+</li>
+<li><p class="first">The base branch should now point to <tt class="docutils literal">pull</tt></p>
+<img alt="http://is210-faculty.github.io/images/github-pull-request-branch-targets.png" class="align-center" src="http://is210-faculty.github.io/images/github-pull-request-branch-targets.png" />
+</li>
+</ol>
+</li>
+<li><p class="first">Now that you're pointing to the correct branch, it's time to pull the
+big green <strong>Create Pull Request</strong> button!</p>
+<img alt="http://is210-faculty.github.io/images/github-pull-request-green-button.png" class="align-center" src="http://is210-faculty.github.io/images/github-pull-request-green-button.png" />
+</li>
+<li><p class="first">You'll be taken to a screen where you can add your first comment in a
+pull request. Think of this as your message to me, your instructor,
+for when you want me to look at something. The title defaults to that
+of the most recent commit and often that's O.K. but you also might
+want to include a description of why you made certain choices or
+questions you might have. Once you're done adding details about why
+you want to merge this code into my repository, click the big green
+<strong>Create Pull Request</strong> button in the righthand corner.</p>
+<img alt="http://is210-faculty.github.io/images/github-create-pull-request-comment.png" class="align-center" src="http://is210-faculty.github.io/images/github-create-pull-request-comment.png" />
+<p>You will now be redirected to your pull request page. Congratulations,
+at this point you have officially submitted your first code for review.
+Copy the link to your pull request and paste it into the body of the
+assignment.</p>
+<img alt="http://is210-faculty.github.io/images/github-open-pull-request.png" class="align-center" src="http://is210-faculty.github.io/images/github-open-pull-request.png" />
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="section" id="task-3-use-jenkins-to-review-test-results">
+<h2>Task 3: Use Jenkins to Review Test Results</h2>
+<ol class="arabic">
+<li><p class="first">The next page you will see after submitting a pull request is the pull
+request comment page. This is where I can view your work and where we'll
+converse about your successes or questions such as they may arise. You can
+also use it to send additional comments to me with direct references to
+line numbers or test results. Please keep in mind that all <a class="reference external" href="https://github.com/">GitHub</a>
+communications are public.</p>
+<img alt="http://is210-faculty.github.io/images/github-open-pull-request.png" class="align-center" src="http://is210-faculty.github.io/images/github-open-pull-request.png" />
+<div class="note">
+<p class="first admonition-title">Note</p>
+<p class="last">I have sometimes found it difficult to rediscover this page when I've
+submitted my own pull requests. It's important to remember that a pull
+request happens on the &quot;origin&quot; repository, in this case, your
+instructor's official <a class="reference external" href="https://github.com/cheuschober/is210_2014_fall_02_lesson_01">assignment repository</a>. To find this page
+again, you must first visit the <a class="reference external" href="https://github.com/cheuschober/is210_2014_fall_02_lesson_01">assignment repository</a> and then click
+the <strong>Pull Requests</strong> link in the right-hand navigation.</p>
+</div>
+</li>
+<li><p class="first">Within a few minutes of submitting your pull request, the IS-Faculty-CI
+robot will start automated testing. You should see its chatter in the
+comments of your pull request. The bot will notify you at 4 points in time:</p>
+<blockquote>
+<ul class="simple">
+<li>When a build has been triggered (think of this as queued, it doesn't
+mean the tests have started).</li>
+<li>When a build has actually started.</li>
+<li>When the test results have been analyzed.</li>
+<li>When the build has finished.</li>
+</ul>
+</blockquote>
+<p>Our build robot is rather pessimistic so I wouldn't worry too much if it
+marks the first two steps as being <em>FAILed</em> since it hasn't analyzed the
+results quite yet.</p>
+<img alt="http://is210-faculty.github.io/images/github-ci-comments.png" class="align-center" src="http://is210-faculty.github.io/images/github-ci-comments.png" />
+</li>
+<li><p class="first">Once the test results are available, the bot will give you a link to more
+details on the build in one of the comments. For this exercise, please
+follow that link (it will begin with <a class="reference external" href="https://128.228.53.195/">https://128.228.53.195/</a>).</p>
+<p>You've now reached Jenkins, the heart of our continuous integration
+platform that allows us to provide you with automated results. The page
+you have been taken to is one that shows the results that are directly
+related to the round of tests you kicked off with your pull request.</p>
+<img alt="http://is210-faculty.github.io/images/jenkins-build-result.png" class="align-center" src="http://is210-faculty.github.io/images/jenkins-build-result.png" />
+<p>There are three links of interest here on the leftnav, two of which are
+necessary for the completion of the assignment. For this assignment we're
+going to ignore the <strong>Console</strong> link which provides detailed output from
+all of the testing.</p>
+</li>
+<li><p class="first">The first link of interest to us is the <strong>Test Result</strong> link which will
+take you to a page that summarizes your test results. If you followed the
+directions above, you should have just one failed test listed under <strong>All
+Failed Tests</strong>:</p>
+<img alt="http://is210-faculty.github.io/images/jenkins-test-result.png" class="align-center" src="http://is210-faculty.github.io/images/jenkins-test-result.png" />
+<p><tt class="docutils literal">lesson_01.test_hello.HelloWorldTestCase.test_jenkins_access</tt></p>
+<p>If you click the plus (+) sign beside its name you'll be given the
+<strong>Error Details</strong> that were reported. If you followed the directions
+thus far your error message should read:</p>
+<blockquote>
+<p><tt class="docutils literal">Good Job! This test is EXPECTED to fail. Your code is: XXXX</tt></p>
+</blockquote>
+<p>Where <tt class="docutils literal">XXXX</tt> is a long string of characters.</p>
+<p>Copy and paste this code into your homework reply.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="task-4-use-the-violations-report-to-affect-a-change">
+<h2>Task 4: Use the Violations Report to Affect a Change</h2>
+<ol class="arabic">
+<li><p class="first">Now that you've seen the test results, we're going to take a look at
+another Jenkins feature, <strong>Violations</strong>. Click on the violations link on
+the left and you'll be brought to a page that shows coding and syntax
+violations.</p>
+<img alt="http://is210-faculty.github.io/images/jenkins-violations.png" class="align-center" src="http://is210-faculty.github.io/images/jenkins-violations.png" />
+</li>
+<li><p class="first">Under the <strong>pylint</strong> heading is a list of files. If you followed directions
+exactly, at least one file should be present and reporting a violation.
+Click the filename to view the file with the offending line highlighted.</p>
+</li>
+<li><p class="first">If you hover your mouse over the little violations icon, you'll be given
+the type of coding violation this file has incurred.</p>
+</li>
+<li><p class="first">Now, for your final task, apply what you learned in the <em>Concepts and
+Terms</em> reading.</p>
+<ol class="arabic simple">
+<li>Decipher the meaning of the violation and how to fix it.</li>
+<li>Use your local repository to make one more change to the offending
+file.</li>
+<li><tt class="docutils literal">add</tt> and <tt class="docutils literal">commit</tt> that file to your local repository.</li>
+<li><tt class="docutils literal">push</tt> your changes upstream to your personal <a class="reference external" href="https://github.com/">GitHub</a> fork</li>
+</ol>
+<div class="note">
+<p class="first admonition-title">Note</p>
+<p>A fun fact about GitHub is that you don't need to subit another pull
+request at this point. GitHub senses that you've made some more changes
+and automatically adds them to the original pull request which is
+still open. This, in turn, will trigger another round of automated
+tests.</p>
+<p class="last">Use this to get into the habbit of making incremental changes in
+response to test results. You only need to go through the trouble of
+forking a repository and submitting a pull request once; everything
+else can happen locally with git commands.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="summary">
+<h1>Summary</h1>
+<p>To summarize, you must complete the following tasks for full credit:</p>
+<ol class="arabic simple">
+<li>Create a <a class="reference external" href="https://github.com/">GitHub</a> account and paste your <a class="reference external" href="https://github.com/">GitHub</a> account name into
+the body of the assignment.</li>
+<li>Fork the lesson repository, make changes, and submit a pull request. Paste
+the link to the pull request into the body of the assignment.</li>
+<li>View the test results from the Jenkins testing server. Copy the code hidden
+in a failed test result and paste it in the body of the assignment.</li>
+<li>View the coding violations in Jenkins for the initial pull request.
+Identify the problem in the code using details given in the <em>Concepts
+and Terms</em> guide. Make corrections locally, <tt class="docutils literal">add</tt>, <tt class="docutils literal">commit</tt>, and
+<tt class="docutils literal">push</tt> those changes to your upstream repository.</li>
+</ol>
+</div>
+</div>
+</body>
+</html>
